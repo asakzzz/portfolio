@@ -4,7 +4,7 @@ import { JetBrains_Mono } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import { Inter } from "next/font/google";
 import { Geist } from "next/font/google";
-import ScrollReveal from "../components/ScrollReveal";
+// import ScrollReveal from "../components/ScrollReveal";
 import Link from "next/link";
 
 const montserrat = Montserrat({
@@ -48,7 +48,7 @@ export default function Home() {
         {/* hyprland setup / show linux ease */}
 
       
-      <ScrollReveal>
+      {/* <ScrollReveal> */}
         <div className="flex flex-wrap mr-2 mb-2">
           <Image
             src="/readme.png"
@@ -67,14 +67,14 @@ export default function Home() {
             className="mb-2 w-auto"
           />
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
       <div className="border-t border-b border-amber-50/60 p-3 mb-3.5 -ml-5">
         <h2 className="font-extrabold text-m font-[geist] ml-5 ">Cyber Security Initiation:</h2>
         <p className="font-[geist] mb-3 text-sm text-amber-50/70 mr-2 ml-5">For our cybersecurity project, we had to take advantage of a website flaws and make a report of each of them (how we did it and how could they could be fixed). All said reports are uploaded on Github as markdowns, organized by categories.</p>
       </div>
 
       </div>
-      <ScrollReveal>
+      {/* // <ScrollReveal> */}
         <div className="flex flex-wrap mr-2 mb-2">
           <Image
             src="/etodo_main.png"
@@ -93,14 +93,14 @@ export default function Home() {
 
           />
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
       <div className="border-t border-b border-amber-50/60 p-3 mb-3.5 -ml-5">
         <h2 className="font-extrabold text-m font-[geist] ml-5">Etodo website:</h2>
         <p className="font-[geist] mb-3 text-sm text-amber-50/70 mr-2 ml-5">One of our first web project was to make a todo webpsite where one could plan their meal for the week. I mainly did the backend and the docker part.</p>
       </div>
 
-      <ScrollReveal>
+      {/* <ScrollReveal> */}
         <div className="flex flex-wrap mr-2 mb-2">
           <Image
             src="/hyprland.png"
@@ -111,14 +111,14 @@ export default function Home() {
 
           />
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
       <div className="border-t border-b border-amber-50/60 p-3 mb-3.5 -ml-5">
         <h2 className="font-extrabold text-m font-[geist] ml-5 ">Linux:</h2>
         <p className="font-[geist] mb-3 text-sm text-amber-50/70 mr-2 ml-5">I'm quite familiar with Linux, which is used worldwide for servers/machines that need a little help. Maintaining and customizing an OS is no problem for me.</p>
       </div>
 
 
-      <ScrollReveal>
+      {/* <ScrollReveal> */}
         <div className="flex flex-wrap mr-2 mb-2">
           <Image
             src="/first_web.png"
@@ -137,7 +137,7 @@ export default function Home() {
             className="mb-2 w-auto"
           />
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
       <div className="border-t border-b border-amber-50/60 p-3 mb-3.5 -ml-5">
         <h2 className="font-extrabold text-m font-[geist] ml-5 ">First frontend:</h2>
         <p className="font-[geist] mb-3 text-sm text-amber-50/70 mr-2 ml-5">This is the first frontend project I've done. This is simply to demonstrate how I progressed in a 6 months timespan</p>
