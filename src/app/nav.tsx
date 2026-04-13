@@ -1,8 +1,6 @@
 'use client';
 import Link from "next/link";
 
-import { usePathname } from "next/navigation";
-
 const links = [
     {
         name: "Github",
@@ -25,7 +23,7 @@ export default function Nav() {
         <nav className="flex flex-col gap-3 font-sans">
             {links.map((link, index) => {
                 return (
-                    <Link href={link.path} key={index} className="text-lg">
+                    <Link href={link.path} key={index} className="text-xl text-amber-50/90 font-[geist]">
                         {link.name}
                     </Link>
                 );

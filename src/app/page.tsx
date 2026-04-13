@@ -9,6 +9,7 @@ import { Geist } from "next/font/google";
 import ScrollReveal from "../components/ScrollReveal";
 import Link from "next/link";
 import { Carousel } from "@/components/Carousel";
+import Nav from "./nav";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,11 +18,11 @@ const montserrat = Montserrat({
 
 export default function Home() {
   return (
-    <main className="ml-3 ">
+    <main className="ml-3">
       <title>My portfolio</title>
       <Header />
       <ScrollReveal>
-        <section className="h-75">
+        <section id="Me" className="h-75">
           <div className=" sticky top-0">
             <div className=" flex flex-col mb-2 mt-15">
               <h1 className="font-extrabold font-[geist] text-3xl mb-3">ABOUT ME</h1>
@@ -39,18 +40,12 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-
-
-
-
-
-
       {/* talk about who I am and personality */}
       {/* talk about what I can do and what i've done in the past to prove my comp */}
       {/* add picture of myself */}
       <section className="h-100">
         <div className="sticky ">
-          <div className="font-extrabold font-[geist] text-3xl mb-3"><h1>MY WORK</h1></div>
+          <div id="Work" className="font-extrabold font-[geist] text-3xl mb-3"><h1>MY WORK</h1></div>
           <ScrollReveal>
             <Carousel />
           </ScrollReveal>
@@ -58,11 +53,12 @@ export default function Home() {
       </section>
 
 
-
-
-
-      {/* make a card and scroll all of my project on the side aka slider */}
-
+      <ScrollReveal>
+        <p id="Contact" className="mt-17 font-extrabold font-[geist] text-3xl mb-3">CONTACTS</p>
+        <div className="mt-5 mb-7 ml-3.5">
+          <Nav />
+        </div>
+      </ScrollReveal>
 
     </main>
 

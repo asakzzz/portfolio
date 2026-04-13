@@ -25,10 +25,17 @@ export default function Header() {
                 </label>
             </header>
             <div className=" max-h-0 overflow-hidden transition-all duration-380 ease-in-out peer-checked:max-h-80">
-                    <div className="ml-6 mt-4">
-                        <Nav/>
-                    </div>
+                <div className="ml-6 mt-4">
+                    <a href="#Me">About Me</a>
                 </div>
+                <div className="ml-6 mt-4">
+                     <a href="#Work">Work</a>
+                </div>
+                <div className="ml-6 mt-4">
+                    <a href="#Contact">Contact</a>
+
+                </div>
+            </div>
         </div>
 
     );
