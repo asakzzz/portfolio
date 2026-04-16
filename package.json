@@ -18,6 +18,7 @@
     "postcss": "^8.5.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-github-calendar": "^5.0.6",
     "upgrade": "^1.1.0"
   },
   "devDependencies": {

@@ -5,12 +5,12 @@ import useEmblaCarousel from 'embla-carousel-react'
 export function Carousel() {
     const [emblaRef] = useEmblaCarousel({ loop: true })
     return (
-        <div className="overflow-hidden bg-background w-full h-[60%]" ref={emblaRef}>
+        <div className="overflow-hidden bg-background w-[80%] md:w-[60%] h-[60%]" ref={emblaRef}>
             <div className="flex">
                 <div className="flex-[0_0_100%] min-w-0 bg-background h-full flex flex-col shrink-0">
 
                     <div className='flex flex-none grow'>
-                        <img src="https://asakzzz.github.io/portfolio/readme.png" className='w-full object-cover' />
+                        <img src="/readme.png" className='w-full object-cover' />
 
                         {/* <img src="/arch_cybers.png" className='object-contain' /> */}
                         {/* maybe take new screenshots of projects because diff resolutions might fuck up things */}
@@ -26,7 +26,7 @@ export function Carousel() {
                 <div className="flex-[0_0_100%] min-w-0 bg-background h-full flex flex-col shrink-0">
 
                     <div className='flex flex-none grow aspect-video'>
-                        <img src="https://asakzzz.github.io/portfolio/etodo_main.png" className='w-full object-cover' />
+                        <img src="/etodo_main.png" className='w-full object-cover' />
                         {/* <img src="/arch_back.png" className='' /> */}
                     </div>
 
@@ -38,7 +38,7 @@ export function Carousel() {
                 </div>
                 <div className="flex-[0_0_100%] min-w-0 bg-background h-full flex flex-col shrink-0 ">
                     <div className='flex flex-row h-[60%]'>
-                        <img src="https://asakzzz.github.io/portfolio/hyprland.png" alt="" className='object-fill' />
+                        <img src="/hyprland.png" alt="" className='object-fill' />
                     </div>
 
                     <div className="border-t border-b border-amber-50/60 p-3 mb-3.5">
@@ -50,7 +50,7 @@ export function Carousel() {
                 <div className="flex-[0_0_100%] min-w-0 bg-background h-full flex flex-col shrink-0">
 
                     <div className='flex flex-row h-[60%]'>
-                        <img src="https://asakzzz.github.io/portfolio/game.png" alt=" object-cover w-full " />
+                        <img src="/game.png" alt=" object-cover w-full " />
                     </div>
 
                     <div className="border-t border-b border-amber-50/60 p-3 mb-3.5 ">
