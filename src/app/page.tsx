@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Carousel } from "@/components/Carousel";
 import Nav from "./nav";
 import dynamic from "next/dynamic";
-
+import { EmailForm } from "@/components/email-template";
 const GitHubCal = dynamic( () => import ("@/components/GithubCalender").then((mod)=>mod.GitHubCal), {ssr:false});
 
 
@@ -70,6 +70,8 @@ export default function Home() {
         <Nav />
       </div>
        </ScrollReveal> 
+
+       <EmailForm/>
 
 
     </main>
