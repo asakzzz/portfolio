@@ -1,37 +1,51 @@
-import * as React from 'react';
-// import { error } from 'console';
+"use client";
+import React, { useRef, FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
+import { h1 } from 'framer-motion/client';
 
+export default function ContactForm() {
+  const form = useRef<HTMLFormElement>(null);
 
-export function EmailForm() {
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = (e: FormEvent) => {
     e.preventDefault();
-    const data = new FormData(e.target as HTMLFormElement);
-    const email = data.get('email')?.toString();
-    const message = data.get('message')?.toString();
 
-    await fetch("http://localhost:3000/api/send", {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, message })
-    }
+    if (!form.current) return;
+
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      form.current,
+      {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      }
     )
-  }
+    .then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Message sent successfully!");
+        form.current?.reset();
+      },
+      (err) => {
+        console.log('FAILED...', err);
+        alert("Failed to send message.");
+      },
+    );
+  };
 
   return (
-    <form id='EmailForm' onSubmit={handleSubmit} className='flex flex-col border border-amber-50-'>
-      <input name='email' className='mb-3' placeholder='Enter your email' />
-      <input name='message' className='mb-3' placeholder='Enter your message' />
-      <button type='submit' className=''>Submit</button>
+    <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+      <label className='-mb-2'>Name</label>
+      <input type="text" name="user_name" required className="border p-2 text-white" />
+      
+      <label className='-mb-2'>Email</label>
+      <input type="email" name="user_email" required className="border p-2 text-white" />
+      
+      <label className='-mb-2'>Message</label>
+      <textarea name="message" required className="border p-2 text-white" />
+      
+      <button type="submit" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-800/60 transition">
+        Send Message
+      </button>
     </form>
-  )
-}
-
-
-export function EmailTemplate({email , message} : {email : string , message: string}) {
-  return (
-    <div>
-      <p>From: {email}</p>
-      <p>{message}</p>
-    </div>
   );
 }

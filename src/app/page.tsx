@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Carousel } from "@/components/Carousel";
 import Nav from "./nav";
 import dynamic from "next/dynamic";
-import { EmailForm } from "@/components/email-template";
+import ContactForm from "@/components/email-template";
 const GitHubCal = dynamic( () => import ("@/components/GithubCalender").then((mod)=>mod.GitHubCal), {ssr:false});
 
 
@@ -64,14 +64,14 @@ export default function Home() {
 
 
 
-      <ScrollReveal>
+      {/* <ScrollReveal>
       <p id="Contact" className=" mt-20 font-extrabold font-[geist] text-3xl mb-3">CONTACTS</p>
       <div className="mt-5 mb-7 ml-3.5">
         <Nav />
       </div>
-       </ScrollReveal> 
-
-       <EmailForm/>
+       </ScrollReveal>  */}
+      <h1 className="font-extrabold font-[geist] text-3xl mb-3 mt-30">CONTACT ME DIRECTLY</h1>
+       <ContactForm/>
 
 
     </main>
