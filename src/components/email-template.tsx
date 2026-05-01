@@ -27,7 +27,7 @@ export default function ContactForm() {
       },
       (err) => {
         console.log('FAILED...', err);
-        alert(err);
+        alert(JSON.stringify(err));
       },
     );
   };
